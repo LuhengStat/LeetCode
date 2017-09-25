@@ -5,13 +5,11 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        a = []
         n = len(nums)
         for i in range(n):
             for j in range(i+1, n):
                 if nums[i] + nums[j] == target:
-                    return [i, j]
-                    break
-
-    a = twoSum(1, [1,2,3], 3)
-    print a
-
+                    a = [i, j]
+                    return a
+        return a
