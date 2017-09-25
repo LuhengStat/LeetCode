@@ -33,4 +33,4 @@ class Solution(object):
 
         return len(Union) - len(InterSec)
 
-    print hammingDistance(1, 1, 4)
+    print hammingDistance(1, 321, 2)

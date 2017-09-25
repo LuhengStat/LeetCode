@@ -1,0 +1,22 @@
+class Solution(object):
+    def judgeCircle(self, moves):
+        """
+        :type moves: str
+        :rtype: bool
+        """
+        Pos = [0, 0]
+        for i in range(len(moves)):
+            temp = moves[i]
+            if temp == "l" or temp == "L":
+                Pos[0] = Pos[0] + 1
+            elif temp == "r" or temp == "R":
+                Pos[0] = Pos[0] - 1
+            elif temp == 'u' or temp == 'U':
+                Pos[1] = Pos[1] + 1
+            else:
+                Pos[1] = Pos[1] - 1
+
+        if sum(map(abs, Pos)) == 0:
+            return True
+        else:
+            return False
