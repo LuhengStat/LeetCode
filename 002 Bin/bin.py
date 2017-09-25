@@ -24,13 +24,11 @@ class Solution(object):
         ybit = BitCal(y)
 
         Union = xbit[:]
+        InterSec = []
         for i in ybit:
             if i not in xbit:
                 Union.append(i)
-
-        InterSec = []
-        for i in xbit:
-            if i in ybit:
+            if i in xbit:
                 InterSec.append(i)
 
         return len(Union) - len(InterSec)
