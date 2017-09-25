@@ -2,7 +2,6 @@ import math
 def BitCal(x):
     flag = 1
     out = []
-
     while flag:
         if x == 0:
             a = 0
