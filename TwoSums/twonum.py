@@ -13,3 +13,4 @@ class Solution(object):
                     a = [i, j]
                     return a
         return a
+    
