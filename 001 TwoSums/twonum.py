@@ -5,12 +5,17 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        a = []
-        n = len(nums)
-        for i in range(n):
-            for j in range(i+1, n):
-                if nums[i] + nums[j] == target:
-                    a = [i, j]
-                    return a
-        return a
-    
+        NumDict = {}
+        if len(nums) <= 1:
+            return False
+        else:
+            for i in range(len(nums)):
+                temp = target - nums[i]
+                if temp in NumDict:
+                    return [NumDict[temp], i]
+                else:
+                    NumDict[nums[i]] = i
+
+    test = [1, 2 ,4, 6 ,8]
+    target = 12
+    print twoSum(1, test, target)
